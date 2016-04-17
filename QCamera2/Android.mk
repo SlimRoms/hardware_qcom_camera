@@ -61,7 +61,7 @@ LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/stack/mm-camera-interface/inc \
         $(LOCAL_PATH)/util \
         hardware/libhardware/include/hardware \
-        hardware/qcom/media/msm8996/libstagefrighthw \
+        $(call project-path-for,qcom-media)/libstagefrighthw \
         $(TARGET_OUT_HEADERS)/mm-core/omxcore \
         system/core/include/cutils \
         system/core/include/system \
@@ -91,7 +91,7 @@ endif
 LOCAL_C_INCLUDES += \
         $(TARGET_OUT_HEADERS)/qcom/display
 LOCAL_C_INCLUDES += \
-        hardware/qcom/display/msm8996/libqservice
+        $(call project-path-for,qcom-display)/libqservice
 LOCAL_SHARED_LIBRARIES := libcamera_client liblog libhardware libutils libcutils libdl libsync libgui
 LOCAL_SHARED_LIBRARIES += libmmcamera_interface libmmjpeg_interface libui libcamera_metadata
 LOCAL_SHARED_LIBRARIES += libqdMetaData libqservice libbinder
